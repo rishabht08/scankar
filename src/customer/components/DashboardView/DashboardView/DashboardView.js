@@ -23,12 +23,12 @@ var DashboardView = React.createClass({
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Dining!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.value) {
                 Swal.fire({
                     input: 'number',
                     inputPlaceholder: 'Members?',
-                    inputValue:1,
+                    inputValue: 1,
                     title: 'How many member?',
                     text: "Availability",
                     icon: 'warning',
@@ -36,56 +36,60 @@ var DashboardView = React.createClass({
                     confirmButtonText: 'Confirm',
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33'
-                   
-                  }).then((result) => {
+
+                }).then((result) => {
                     if (result.value) {
 
-                        axios.get("http://13.127.237.253:5000/api/v1/info").then(res=>{
-                            console.log("response" , res.data.data.details[2])
+                        axios.get("http://13.127.237.253:5000/api/v1/info").then(res => {
+                            console.log("response", res.data.data.details[2])
                             const seatsAvailable = res.data.data.details[2].seats.seatsAvailable;
-                            if(seatsAvailable < result.value){
+                            if (seatsAvailable < result.value) {
                                 Swal.fire(
                                     'Sorry',
                                     'Please Wait for some time for the seats to be available',
                                     'warning',
-                                    
-                                  )
+
+                                )
 
                             }
-                            else{
+                            else {
                                 cookie.set('dining', res.data.data.details[2])
-                                cookie.set("seatNumber" , result.value)
+                                cookie.set("seatNumber", result.value)
                                 window.location.href = "/custom-order"
 
                             }
                         })
 
 
-                     
-                   
+
+
                     }
-                  })
-                  
-            }else if('Take away!'){
-                window.location.href = "/custom-order"
+                })
+
+            } else if ('Take away!') {
+                axios.get("http://13.127.237.253:5000/api/v1/info").then(res => {
+                    cookie.set('dining', res.data.data.details[2])
+                    window.location.href = "/custom-order"
+
+                })
             }
-          })
+        })
     },
 
-    render: function() {
+    render: function () {
         return (
             <div className="dashboard-container">
                 <div className="title-cover">
-                <h1>Hey {this.props.username}!</h1>
-                <h1>Your coffee is just minutes away.</h1>
+                    <h1>Hey {this.props.username}!</h1>
+                    <h1>Your coffee is just minutes away.</h1>
                 </div>
 
                 <div className="main-wrap">
-                        <Link to="" className="start-button-wrap">
-                            <button
-                                onClick={this.startButton}
-                                className="next-button start-button">
-                                <i className="fa fa-coffee" aria-hidden="true"></i>
+                    <Link to="" className="start-button-wrap">
+                        <button
+                            onClick={this.startButton}
+                            className="next-button start-button">
+                            <i className="fa fa-coffee" aria-hidden="true"></i>
                                     Start
                             </button></Link>
                 </div>

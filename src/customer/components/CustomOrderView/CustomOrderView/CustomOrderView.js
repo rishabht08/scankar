@@ -75,7 +75,9 @@ var CustomOrderView = React.createClass({
     componentWillMount(){
         let userName = cookie.get("username") ? cookie.get("username") : "Guest" ;
 
-        console.log("username--->" , JSON.parse(cookie.get("dining")))
+        if(!cookie.get("seatNumber")){
+            cookie.set("seatNumber" , 0)
+        }
 
         this.setState({
             username:userName
