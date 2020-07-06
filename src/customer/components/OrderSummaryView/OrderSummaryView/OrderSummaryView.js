@@ -137,7 +137,7 @@ var OrderSummaryView = React.createClass({
             "orders" : arr
         }
 
-        axios.post("http://13.127.237.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
+        axios.post("http://13.233.233.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
             console.log("afeter submit" , res)
             window.location.href = "/confirmation"
         })
