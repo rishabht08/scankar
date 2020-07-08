@@ -11,7 +11,7 @@ var OrderTax = React.createClass({
         return (
                 <tr className="order-total-tax">
                     <td className="title">Tax</td>
-                    <td>${this.props.orderTax.toFixed(2)}</td>
+                    <td>5%</td>
                 </tr>
         )
     }
