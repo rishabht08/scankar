@@ -51,7 +51,7 @@ var SelectShopView = React.createClass({
                 </div> */}
 
                 <div className="random" style={{width:"100%" , "text-align":"center" , "marginTop":"2%"}}>
-                    <QRCode value="http://13.233.233.253" size={700} />
+                    <QRCode value="https://gomocha.netlify.app" size={700} />
                 </div>
 
                 {/* <div className="main-wrap">
