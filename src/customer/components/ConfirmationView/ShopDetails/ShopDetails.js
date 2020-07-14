@@ -12,7 +12,7 @@ var ShopDetails = React.createClass({
     render: function () {
 
         console.log("prop", this.props.selectedShop)
-        let dining = JSON.parse(cookie.get("dining"))
+        // let dining = JSON.parse(cookie.get("dining"))
 
         let shop = JSON.parse(cookie.get("shopDetails")).length != 0 ? JSON.parse(cookie.get("shopDetails"))[0] : {}
 

@@ -73,8 +73,14 @@ var App = React.createClass({
     },
 
     getShopDetails : function (data){
+
+        let idArr =  this.props.params.id.split("")
+        let id = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? idArr.splice(0 , idArr.length-4).join("") : idArr.join("")
+        let type = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? "Take Away" : "Dining"
+        cookie.set("type", type)
+       
         let shop = data.filter(item=>{
-            return item.id == this.props.params.id
+            return item.id == id
         })
 
         cookie.set("shopDetails" , shop)

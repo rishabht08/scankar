@@ -104,9 +104,9 @@ var DashboardView = React.createClass({
                 </div>
 
                 <div className="main-wrap">
-                    <Link to={`/${this.props.params.id}`} className="start-button-wrap">
+                    <Link to={`/${this.props.params.id}/custom-order`} className="start-button-wrap">
                         <button
-                            onClick={this.startButton}
+                            // onClick={this.startButton}
                             className="next-button start-button">
                             <i className="fa fa-coffee" aria-hidden="true"></i>
                                     Start
