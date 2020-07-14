@@ -69,7 +69,8 @@ var SelectShopView = React.createClass({
 
                 <div className="random" style={{width:"100%" , "text-align":"center" , "marginTop":"2%"}}>
                     {/* <QRCode value="http://13.233.233.253/" size={700} /> */}
-                    <QRCode value={`http://localhost:3000/${this.state.shop.id}`} size={700} />
+                    {/* <QRCode value={`http://localhost:3000/${this.state.shop.id}`} size={700} /> */}
+                    <QRCode value={`https://scankar.netlify.app/${this.state.shop.id}`} size={700} />
                 </div>
 
                 {/* <div className="main-wrap">
