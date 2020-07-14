@@ -61,6 +61,8 @@ var App = React.createClass({
     // and passes it to its callback (_handleGetLocation)
     componentWillMount: function () {
         console.log("idddd" , this.props.params.id)
+
+        this.getShopDetails(dummyShopData)
         // api.getLocation(this._handleUserLocation, this._handleGetLocation);
         this._handleCoffeeShopDummyState(dummyShopData);
 
@@ -68,6 +70,16 @@ var App = React.createClass({
         setTimeout(() => {
             this._handleUserLocationCheck();
         }, 8000);
+    },
+
+    getShopDetails : function (data){
+        let shop = data.filter(item=>{
+            return item.id == this.props.params.id
+        })
+
+        cookie.set("shopDetails" , shop)
+        
+
     },
 
     _handleUserLocationCheck: function () {

@@ -139,7 +139,7 @@ var OrderSummaryView = React.createClass({
 
         axios.post("http://13.233.233.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
             console.log("afeter submit" , res)
-            window.location.href = "/confirmation"
+            window.location.href = `/${this.props.params.id}/confirmation`
         })
 
         this._handleStateClear();

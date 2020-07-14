@@ -14,17 +14,19 @@ var ShopDetails = React.createClass({
         console.log("prop", this.props.selectedShop)
         let dining = JSON.parse(cookie.get("dining"))
 
+        let shop = JSON.parse(cookie.get("shopDetails")).length != 0 ? JSON.parse(cookie.get("shopDetails"))[0] : {}
+
 
         // var selectedShop = this.props.selectedShop;
 
 
         return (
             <div className="shop-details-container">
-                <h2>{dining.name}</h2>
-                <p>"28 6th St, San Francisco"</p>
+                <h2>{shop.name}</h2>
+                <p>{shop.vicinity}</p>
 
-                <p>{dining.rating}</p>
-                <img src={dining.photo} />
+                <p>{shop.rating}</p>
+                <img src={shop.icon} />
                 <p>Distance: 0.5 mi</p>
             </div>
         )
