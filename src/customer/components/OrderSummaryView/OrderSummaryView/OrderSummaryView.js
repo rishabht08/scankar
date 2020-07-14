@@ -195,7 +195,7 @@ var OrderSummaryView = React.createClass({
                     </button>
                 </div>
 
-                <Link to="/custom-order">
+                <Link to={`/${this.props.params.id}/custom-order`}>
                     <button className="next-button order-summary-edit-button">
                         Edit my order
                         <i className="fa fa-pencil fa-lg" aria-hidden="true"></i>

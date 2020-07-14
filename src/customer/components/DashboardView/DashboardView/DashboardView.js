@@ -19,10 +19,10 @@ var DashboardView = React.createClass({
             text: "Welcome, with your digital waiter!",
             icon: 'question',
             showCancelButton: true,
-            cancelButtonText: 'Take away!',
+            cancelButtonText: 'Take away',
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Dining!'
+            confirmButtonText: 'Dine In'
         }).then((result) => {
             if (result.value) {
                 Swal.fire({
@@ -67,7 +67,7 @@ var DashboardView = React.createClass({
                                     'success',
 
                                 ).then(() => {
-                                    window.location.href = "/custom-order"
+                                    window.location.href = `/${this.props.params.id}/custom-order`
 
                                 })
 
@@ -87,7 +87,7 @@ var DashboardView = React.createClass({
                 axios.get("http://13.233.233.253:5000/api/v1/info").then(res => {
                     cookie.set('dining', res.data.data.details[2])
                     cookie.set("type", "Take Away")
-                    window.location.href = "/custom-order"
+                    window.location.href = `/${this.props.params.id}/custom-order`
 
                 })
 
@@ -104,7 +104,7 @@ var DashboardView = React.createClass({
                 </div>
 
                 <div className="main-wrap">
-                    <Link to="" className="start-button-wrap">
+                    <Link to={`/${this.props.params.id}`} className="start-button-wrap">
                         <button
                             onClick={this.startButton}
                             className="next-button start-button">

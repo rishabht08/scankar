@@ -195,15 +195,15 @@ var AdditionalInfoView = React.createClass({
 
         var nextButton;
         if (this.state.pickupTime === true && this.state.methodOfTrans) {
-            nextButton = <Link to={{ pathname: "/order-summary", state: { items: this.props.location.state.items } }}>
-                <button className="next-button">
+            nextButton = <Link to={{ pathname: `/${this.props.params.id}/order-summary`, state: { items: this.props.location.state.items } }}>
+                <button className="next-button s-align">
                     Next
                                 <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
                 </button>
             </Link>
         } else if (this.state.pickupTime !== true) {
-            nextButton = <Link to={{ pathname: "/order-summary", state: { items: this.props.location.state.items } }}>
-                <button className="next-button">
+            nextButton = <Link to={{ pathname: `/${this.props.params.id}/order-summary`, state: { items: this.props.location.state.items } }}>
+                <button className="next-button s-align">
                     Next
                                 <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
                 </button>
@@ -211,7 +211,7 @@ var AdditionalInfoView = React.createClass({
         } else {
             nextButton = <button
                 onClick={this.toggleAdditionalInfoNotification}
-                className="next-button">
+                className="next-button s-align">
                 Next
                             <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
             </button>

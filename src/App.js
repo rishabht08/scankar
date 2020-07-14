@@ -11,18 +11,21 @@ import PreviousOrdersView from './customer/components/PreviousOrdersView/Previou
 import FavoriteOrdersView from './customer/components/FavoriteOrdersView/FavoriteOrdersView/FavoriteOrdersView'
 import AppBusiness from './business-admin/components/App'
 import BusinessAdminView from './business-admin/components/BusinessAdminView/BusinessAdminView/BusinessAdminView'
+import CategoryManuOrdersView from './customer/components/CategoryManuOrdersView/CategoryManuOrdersView'
 
 
 
-var Routes = <div> <Route path="/" component={App}>
+var Routes = <div> <Route path="/:id" component={App}>
     <IndexRoute component={DashboardView} />
 
-    <Route path="previous-orders" component={PreviousOrdersView} />
-    <Route path="favorite-orders" component={FavoriteOrdersView} />
-    <Route path="/custom-order" component={CustomOrderView} />
-    <Route path="additional-info" component={AdditionalInfoView} />
-    <Route path="order-summary" component={OrderSummaryView} />
-    <Route path="confirmation" component={ConfirmationView} />
+    <Route path="/:id/previous-orders" component={PreviousOrdersView} />
+    <Route path="/:id/favorite-orders" component={FavoriteOrdersView} />
+    <Route path="/:id/custom-order" component={CustomOrderView} />
+    <Route path="/:id/additional-info" component={AdditionalInfoView} />
+    <Route path="/:id/order-summary" component={OrderSummaryView} />
+    <Route path="/:id/confirmation" component={ConfirmationView} />
+    <Route path="/:id/category-manu" component={CategoryManuOrdersView} />
+
 
 </Route>
     {/* <Route path="/admin" component={AppBusiness}>
@@ -30,9 +33,9 @@ var Routes = <div> <Route path="/" component={App}>
     </Route> */}
       <Route path="/admin" component={AppBusiness}>
         <IndexRoute component={BusinessAdminView} />
-    </Route>
+     </Route>
 
-    <Route path="select-shop" component={SelectShopView} />
+    <Route path="/:id/select-shop" component={SelectShopView} />
 
 
 
