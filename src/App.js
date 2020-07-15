@@ -25,7 +25,7 @@ var Routes = <div>
         <Route path="/:id/additional-info" component={AdditionalInfoView} />
         <Route path="/:id/order-summary" component={OrderSummaryView} />
         <Route path="/:id/confirmation" component={ConfirmationView} />
-        <Route path="/:id/category-manu" component={CategoryManuOrdersView} />
+        <Route path="/:id/category-menu" component={CategoryManuOrdersView} />
 
 
     </Route>

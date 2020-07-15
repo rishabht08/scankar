@@ -7,12 +7,12 @@ export class CategoryManuOrdersView extends Component {
     return (
       <div className="main-container">
         <div className="manu-title">
-          <h1>Your Manu</h1>
+          <h1>Your Menu</h1>
         </div>
 
         <div className="second-container">
           <div id="c-grid" className="grid-container">
-            <div className="location-image bg1">
+            <div className="location-image bg1" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -28,7 +28,7 @@ export class CategoryManuOrdersView extends Component {
                 style={{ color: "#fff" }}
               ></div>
             </div>
-            <div className="location-image bg2">
+            <div className="location-image bg2" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -39,7 +39,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg3">
+            <div className="location-image bg3" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -50,7 +50,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg4">
+            <div className="location-image bg4" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -61,7 +61,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg5">
+            <div className="location-image bg5" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -72,7 +72,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg6">
+            <div className="location-image bg6" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -83,7 +83,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg7">
+            <div className="location-image bg7" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -94,7 +94,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg8">
+            <div className="location-image bg8" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -105,7 +105,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg9">
+            <div className="location-image bg9" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
@@ -116,7 +116,7 @@ export class CategoryManuOrdersView extends Component {
                 Name
               </h2>
             </div>
-            <div className="location-image bg10">
+            <div className="location-image bg10" onClick={()=> window.location.href = `/${this.props.params.id}/custom-order`}>
               <h2
                 style={{
                   color: "white",
