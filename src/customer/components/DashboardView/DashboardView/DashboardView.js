@@ -40,7 +40,7 @@ var DashboardView = React.createClass({
                 }).then((result) => {
                     if (result.value) {
 
-                        axios.get("https://scankar.herokuapp.com/api/v1/info").then(res => {
+                        axios.get("http://13.233.233.253:5000/api/v1/info").then(res => {
                             console.log("response", res.data.data.details[2])
                             const seatsAvailable = res.data.data.details[2].seats.seatsAvailable;
                             if (seatsAvailable < result.value) {
@@ -84,7 +84,7 @@ var DashboardView = React.createClass({
                 })
 
             } else if ('Take away!') {
-                axios.get("https://scankar.herokuapp.com/api/v1/info").then(res => {
+                axios.get("http://13.233.233.253:5000/api/v1/info").then(res => {
                     cookie.set('dining', res.data.data.details[2])
                     cookie.set("type", "Take Away")
                     window.location.href = `/${this.props.params.id}/custom-order`

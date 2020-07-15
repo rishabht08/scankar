@@ -134,10 +134,13 @@ var OrderSummaryView = React.createClass({
             "isDelivered": false,
             "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
             "userName": cookie.get("username"),
-            "orders" : arr
+            "orders" : arr,
+            "noOfSeatsRequested": 1 + Math.floor(Math.random() * 25),
+            "orderType": cookie.get("type")
+
         }
 
-        axios.post("https://scankar.herokuapp.com/api/v1/customer-order/create-order" , data).then(res=>{
+        axios.post("http://13.233.233.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
             console.log("afeter submit" , res)
             window.location.href = `/${this.props.params.id}/confirmation`
         })
