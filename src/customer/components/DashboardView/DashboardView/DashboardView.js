@@ -53,7 +53,7 @@ var DashboardView = React.createClass({
 
                             }
                             else {
-                                cookie.set("type", "Dining")
+                                cookie.set("type", "Dine In")
                                 cookie.set('dining', res.data.data.details[2])
                                 cookie.set("seatNumber", result.value)
                            
