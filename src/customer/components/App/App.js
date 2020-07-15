@@ -78,6 +78,9 @@ var App = React.createClass({
         let id = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? idArr.splice(0 , idArr.length-4).join("") : idArr.join("")
         let type = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? "Take Home" : "Dine In"
         cookie.set("type", type)
+
+        let seatNumber = id.split("").slice(id.length-2 , id.length-1)[0] == "T" ? parseInt(id.split("").slice(id.length-1 , id.length)[0]) : 25; 
+        cookie.set("seatNumber" , seatNumber)
        
         let shop = data.filter(item=>{
             return item.id == id

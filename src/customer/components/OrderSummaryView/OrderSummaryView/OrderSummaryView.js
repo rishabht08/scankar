@@ -135,7 +135,7 @@ var OrderSummaryView = React.createClass({
             "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
             "userName": cookie.get("username"),
             "orders" : arr,
-            "noOfSeatsRequested": 1 + Math.floor(Math.random() * 25),
+            "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
             "orderType": cookie.get("type")
 
         }
