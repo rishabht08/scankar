@@ -76,7 +76,7 @@ var App = React.createClass({
 
         let idArr =  this.props.params.id.split("")
         let id = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? idArr.splice(0 , idArr.length-4).join("") : idArr.join("")
-        let type = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? "Take Away" : "Dining"
+        let type = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? "Take Home" : "Dine In"
         cookie.set("type", type)
        
         let shop = data.filter(item=>{
