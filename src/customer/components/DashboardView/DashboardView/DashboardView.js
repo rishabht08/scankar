@@ -86,7 +86,7 @@ var DashboardView = React.createClass({
             } else if ('Take away!') {
                 axios.get("http://13.233.233.253:5000/api/v1/info").then(res => {
                     cookie.set('dining', res.data.data.details[2])
-                    cookie.set("type", "Take Away")
+                    cookie.set("type", "Take Home")
                     window.location.href = `/${this.props.params.id}/custom-order`
 
                 })
