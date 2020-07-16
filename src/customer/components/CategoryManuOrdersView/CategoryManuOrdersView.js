@@ -6,9 +6,9 @@ export class CategoryManuOrdersView extends Component {
   render() {
     return (
       <div className="main-container">
-        <div className="manu-title">
-        <h1 style={{ color: "#071a52" }}>Your Manu</h1>
-        </div>
+        {/* <div className="manu-title">
+        <h1 style={{ color: "#071a52" }}>Your Menu</h1>
+        </div> */}
 
         <div className="second-container">
           <div id="c-grid" className="grid-container">
